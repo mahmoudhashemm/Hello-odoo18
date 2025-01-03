@@ -5,7 +5,7 @@ CHAT=$3
 PORT8069=$4
 PORT8072=$5
 # clone Odoo directory
-git clone --depth=1 https://github.com/mahmoudhashemm/Hello-odoo17.git $DESTINATION
+git clone --depth=1 https://github.com/mahmoudhashemm/Hello-odoo18.git $DESTINATION
 rm -rf $DESTINATION/.git
 # set permission
 mkdir -p $DESTINATION/postgresql
@@ -22,7 +22,7 @@ sed -i 's/8072/'$PORT8072'/g' $DESTINATION/docker-compose.yml
 sed -i 's/8069/'$PORT8069'/g' $DESTINATION/etc/odoo.conf
 sed -i 's/8072/'$PORT8072'/g' $DESTINATION/etc/odoo.conf
 
-git clone --depth 1 --branch main git@github.com:mahmoudhashemm/odoo17pro "$DESTINATION/enterprise"
+git clone --depth 1 --branch main git@github.com:mahmoudhashemm/odoo18pro "$DESTINATION/enterprise"
 
 # run Odoo
 docker-compose -f $DESTINATION/docker-compose.yml up -d
