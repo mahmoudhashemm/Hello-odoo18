@@ -14,7 +14,7 @@ services:
     cpus: 6      # تحديد عدد الأنوية المستخدمة بـ 12 كور
   odoo17:
     #image: odoo:17.0
-    image: odoo:18.0
+    image: odooo-18.0 
 
     user: root
     depends_on:
